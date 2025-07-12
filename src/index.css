@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap');
+
+:root {
+  font-family: "Montserrat", Avenir, Helvetica, Arial, sans-serif, system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1c1c1c;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formTitle {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 400;
+  transition: color 0.5s ease;
+  display: inline-block;
+}
+
+.formTitle:hover {
+  color: #b9bdc2;
+}
+
+.btnSubmit {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  user-select: none;
+  padding: 6px 12px;
+  touch-action: manipulation;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 0 !important;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.42857143;
+  transition: all .25s ease 0s;
+}
+
+.btnSubmit:focus, .btnSubmit:hover {
+  color: #4AA7B3;
+  border: 1px solid #4AA7B3;
+  background-color: #1c1c1c;
+}

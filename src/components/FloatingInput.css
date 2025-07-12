@@ -1,0 +1,73 @@
+.inputGroup {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 3rem;
+  --accent-color: #4AA7B3;
+}
+
+.inputUnderline {
+  border: none;
+  border-bottom: 2px solid #444;
+  background-color: transparent;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 0px 4px 6px 4px;
+  padding-right: 40px;
+  transition: border-color 0.4s ease-in, border-bottom-width 0.4s ease-in;
+}
+
+.inputUnderline:focus {
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.inputUnderline::placeholder {
+  color: transparent
+}
+
+.inputIcon img{
+    position: absolute;
+    pointer-events: none;
+    right: 2px;
+    bottom: 2px;
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-70%);
+}
+
+.inputLabel {
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  /* Disable interaction with the label */
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Apply the style if the input if focused,
+  Apply the style if input is filled */
+.inputUnderline:focus + .inputLabel,
+.inputUnderline.filled + .inputLabel {
+  transform: translateY(35px);
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+/* Fight chrome's auto complete styling changes */
+.inputUnderline:-webkit-autofill {
+  /* Force animation to take a really long time */
+  transition: background-color 9999s ease-in-out 0s;
+  /* Force color over autofill */
+  -webkit-text-fill-color: white !important;
+  /* Cover autofill color with a shadow of my color.
+     Chrome doesn't override box shadow like it might background */
+  box-shadow: 0 0 0px 1000px #1c1c1c inset;
+  font-family: 'Montserrat', sans-serif;
+}
