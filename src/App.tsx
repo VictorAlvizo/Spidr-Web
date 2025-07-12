@@ -92,6 +92,8 @@ function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Note: Input is not being checked for validilty
+
     console.log("First Name: " + firstName);
     console.log("Last Name: " + lastName);
     console.log("Phone Number: " + phoneNumber);
